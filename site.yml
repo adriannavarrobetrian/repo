@@ -1,0 +1,12 @@
+---
+# This playbook deploys the Tomcat 7 server.
+
+- name: Tomcat
+  hosts: all
+  remote_user: root
+  become: yes
+  become_method: sudo
+
+  roles:
+    - centos
+    - tomcat
